@@ -89,6 +89,22 @@ namespace csharp_typesystem_snacks
                     Console.WriteLine($"Il numero è dispari, quindi ecco il numero successivo: {num++}");
                 }
             }
+            {
+                //Snack 6
+                string[] invited = { "John", "Alex", "Mark", "James", "Matthew" };
+
+                Console.Write("\n\nCome ti chiami?: ");
+                string name = Console.ReadLine();
+
+                if (invited.Contains(name))
+                {
+                    Console.WriteLine($"Prego {name}, può entrare!");
+                }
+                else
+                {
+                    Console.WriteLine($"Mi dispiace {name} ma non la vedo sulla mia lista");
+                }
+            }
         }
     }
 }
