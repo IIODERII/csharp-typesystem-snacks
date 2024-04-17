@@ -33,7 +33,13 @@ namespace csharp_typesystem_snacks
             //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
             //Ogni volta che ne crei uno, stampalo a schermo.
 
-            
+            //Snack 1
+            Console.WriteLine("Inserire il primo numero");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Inserire il secondo numero");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
         }
     }
 }
