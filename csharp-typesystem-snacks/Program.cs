@@ -32,23 +32,35 @@ namespace csharp_typesystem_snacks
             //Fai inserire un numero, che chiameremo N, all’utente.
             //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
             //Ogni volta che ne crei uno, stampalo a schermo.
-
+            {
             //Snack 1
             Console.WriteLine("Inserire il primo numero");
             int num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Inserire il secondo numero");
             int num2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
-
+                Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
+            }
+            {
             //Snack 2
             Console.WriteLine("\n\nInserire la prima parola");
             string word1 = Console.ReadLine();
             Console.WriteLine("Inserire la seconda parola");
-            string word2 = Console.ReadLine();
-
+                string word2 = Console.ReadLine();
+            
             Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
             Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
+            }
+            {
+                //Snack 3
+                Console.WriteLine("\n\n");
+                int somma = 0;
+                for (int i = 0; i < 10; i++) {
+                    Console.WriteLine("Inserisci un numero");
+                    somma += Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine($"La somma dei numeri inseriti è: {somma}");
+            }
         }
     }
 }
