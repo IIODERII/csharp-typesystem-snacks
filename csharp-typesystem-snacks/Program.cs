@@ -40,6 +40,15 @@ namespace csharp_typesystem_snacks
             int num2 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
+
+            //Snack 2
+            Console.WriteLine("\n\nInserire la prima parola");
+            string word1 = Console.ReadLine();
+            Console.WriteLine("Inserire la seconda parola");
+            string word2 = Console.ReadLine();
+
+            Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
+            Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
         }
     }
 }
