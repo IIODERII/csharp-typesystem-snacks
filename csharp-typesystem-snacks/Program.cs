@@ -32,77 +32,94 @@ namespace csharp_typesystem_snacks
             //Fai inserire un numero, che chiameremo N, all’utente.
             //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
             //Ogni volta che ne crei uno, stampalo a schermo.
-            {
-                //Snack 1
-                Console.WriteLine("Inserire il primo numero");
-                int num1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Inserire il secondo numero");
-                int num2 = Convert.ToInt32(Console.ReadLine());
+            //{
+            //    //Snack 1
+            //    Console.WriteLine("Inserire il primo numero");
+            //    int num1 = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Inserire il secondo numero");
+            //    int num2 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
-            }
-            {
-                //Snack 2
-                Console.WriteLine("\n\nInserire la prima parola");
-                string word1 = Console.ReadLine();
-                Console.WriteLine("Inserire la seconda parola");
-                    string word2 = Console.ReadLine();
+            //    Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
+            //}
+            //{
+            //    //Snack 2
+            //    Console.WriteLine("\n\nInserire la prima parola");
+            //    string word1 = Console.ReadLine();
+            //    Console.WriteLine("Inserire la seconda parola");
+            //        string word2 = Console.ReadLine();
             
-                Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
-                Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
-            }
+            //    Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
+            //    Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
+            //}
+            //{
+            //    //Snack 3
+            //    Console.WriteLine("\n\n");
+            //    int somma = 0;
+            //    for (int i = 0; i < 10; i++) {
+            //        Console.WriteLine("Inserisci un numero");
+            //        somma += Convert.ToInt32(Console.ReadLine());
+            //    }
+            //    Console.WriteLine($"La somma dei numeri inseriti è: {somma}");
+            //}
+            //{
+            //    //Snack 4
+            //    int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //    int somma = 0;
+
+            //    foreach (int number in numbers)
+            //    {
+            //        somma += number;
+            //    }
+
+            //    Console.WriteLine($"\n\nLa somma dei numeri da 2 a 10 è: {somma}");
+            //    Console.WriteLine($"La mdeia dei numeri da 2 a 10 è: {somma / numbers.Length}");
+            //}
+            //{
+            //    //Snack 5
+            //    Console.WriteLine("Inserire un numero: ");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+
+            //    if(num % 2 == 0)
+            //    {
+            //        Console.WriteLine($"Il numero è pari, quindi ecco il tuo numero: {num}");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"Il numero è dispari, quindi ecco il numero successivo: {num++}");
+            //    }
+            //}
+            //{
+            //    //Snack 6
+            //    string[] invited = { "John", "Alex", "Mark", "James", "Matthew" };
+
+            //    Console.Write("\n\nCome ti chiami?: ");
+            //    string name = Console.ReadLine();
+
+            //    if (invited.Contains(name))
+            //    {
+            //        Console.WriteLine($"Prego {name}, può entrare!");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"Mi dispiace {name} ma non la vedo sulla mia lista");
+            //    }
+            //}
             {
-                //Snack 3
-                Console.WriteLine("\n\n");
-                int somma = 0;
-                for (int i = 0; i < 10; i++) {
-                    Console.WriteLine("Inserisci un numero");
-                    somma += Convert.ToInt32(Console.ReadLine());
+                //Snack 7
+                int[] numList = {};
+                for(int i = 0; i < 6; i++) {
+                    Console.WriteLine("Inserire un numero:");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    if( num % 2 == 0)
+                    {
+                        Array.Resize(ref numList, numList.Length+1);
+                        numList[numList.Length - 1] = num;
+                    };
                 }
-                Console.WriteLine($"La somma dei numeri inseriti è: {somma}");
-            }
-            {
-                //Snack 4
-                int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-                int somma = 0;
-
-                foreach (int number in numbers)
+                foreach (var num in numList)
                 {
-                    somma += number;
-                }
-
-                Console.WriteLine($"\n\nLa somma dei numeri da 2 a 10 è: {somma}");
-                Console.WriteLine($"La mdeia dei numeri da 2 a 10 è: {somma / numbers.Length}");
-            }
-            {
-                //Snack 5
-                Console.WriteLine("Inserire un numero: ");
-                int num = Convert.ToInt32(Console.ReadLine());
-
-                if(num % 2 == 0)
-                {
-                    Console.WriteLine($"Il numero è pari, quindi ecco il tuo numero: {num}");
-                }
-                else
-                {
-                    Console.WriteLine($"Il numero è dispari, quindi ecco il numero successivo: {num++}");
-                }
-            }
-            {
-                //Snack 6
-                string[] invited = { "John", "Alex", "Mark", "James", "Matthew" };
-
-                Console.Write("\n\nCome ti chiami?: ");
-                string name = Console.ReadLine();
-
-                if (invited.Contains(name))
-                {
-                    Console.WriteLine($"Prego {name}, può entrare!");
-                }
-                else
-                {
-                    Console.WriteLine($"Mi dispiace {name} ma non la vedo sulla mia lista");
+                    Console.WriteLine(num);
                 }
             }
         }
