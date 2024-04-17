@@ -32,6 +32,7 @@ namespace csharp_typesystem_snacks
             //Fai inserire un numero, che chiameremo N, all’utente.
             //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
             //Ogni volta che ne crei uno, stampalo a schermo.
+
             //{
             //    //Snack 1
             //    Console.WriteLine("Inserire il primo numero");
@@ -136,23 +137,41 @@ namespace csharp_typesystem_snacks
 
             //    Console.WriteLine($"La somma dei inumeri in posizione dispari è: {somma}");
             //}
-            {
-                //Snack 9 
-                int[] numList = {};
-                
-                while(numList.Sum(num => num) < 50) {
-                    Console.Write($"\nInserisci un numero da inserire: ");
-                    Array.Resize( ref numList, numList.Length+1 );
-                    int num = Convert.ToInt32(Console.ReadLine());
-                    numList[numList.Length-1] = num;
-                }
+            //{
+            //    //Snack 9 
+            //    int[] numList = {};
 
-                Console.WriteLine($"\nEcco la tua lista:");
-                foreach( int num in numList )
+            //    while(numList.Sum(num => num) < 50) {
+            //        Console.Write($"\nInserisci un numero da inserire: ");
+            //        Array.Resize( ref numList, numList.Length+1 );
+            //        int num = Convert.ToInt32(Console.ReadLine());
+            //        numList[numList.Length-1] = num;
+            //    }
+
+            //    Console.WriteLine($"\nEcco la tua lista:");
+            //    foreach( int num in numList )
+            //    {
+            //        Console.WriteLine(num);
+            //    }
+            //    Console.WriteLine($"La somma è pari a {numList.Sum(num => num)}");
+            //}
+            {
+                //Snack 10
+                Console.WriteLine("Inserisci il numero di array da creare");
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                for (int i = 0; i < n; i++)
                 {
-                    Console.WriteLine(num);
+                    int[] numbers = new int[10];
+
+                    for(int j  = 0; j < numbers.Length; j++)
+                    {
+                        Random random = new Random();
+                        numbers[j] = random.Next(1, 101);
+                        Console.WriteLine($"{j}. {numbers[j]}");
+                    }
+                    Console.WriteLine("\n");
                 }
-                Console.WriteLine($"La somma è pari a {numList.Sum(num => num)}");
             }
         }
     }
