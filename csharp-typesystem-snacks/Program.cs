@@ -47,7 +47,7 @@ namespace csharp_typesystem_snacks
             //    string word1 = Console.ReadLine();
             //    Console.WriteLine("Inserire la seconda parola");
             //        string word2 = Console.ReadLine();
-            
+
             //    Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
             //    Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
             //}
@@ -122,19 +122,37 @@ namespace csharp_typesystem_snacks
             //        Console.WriteLine(num);
             //    }
             //}
+            //{
+            //    //Snack 8
+            //    int[] numList = { 2, 45, 7, 32, 3, 4, 1, 6, 4, 2, 85 };
+            //    int somma = 0;
+            //    for(int i = 0;i < numList.Length;i++)
+            //    {
+            //        if(i% 2 != 0)
+            //        {
+            //            somma += numList[i];
+            //        }
+            //    }
+
+            //    Console.WriteLine($"La somma dei inumeri in posizione dispari è: {somma}");
+            //}
             {
-                //Snack 8
-                int[] numList = { 2, 45, 7, 32, 3, 4, 1, 6, 4, 2, 85 };
-                int somma = 0;
-                for(int i = 0;i < numList.Length;i++)
-                {
-                    if(i% 2 != 0)
-                    {
-                        somma += numList[i];
-                    }
+                //Snack 9 
+                int[] numList = {};
+                
+                while(numList.Sum(num => num) < 50) {
+                    Console.Write($"\nInserisci un numero da inserire: ");
+                    Array.Resize( ref numList, numList.Length+1 );
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    numList[numList.Length-1] = num;
                 }
 
-                Console.WriteLine($"La somma dei inumeri in posizione dispari è: {somma}");
+                Console.WriteLine($"\nEcco la tua lista:");
+                foreach( int num in numList )
+                {
+                    Console.WriteLine(num);
+                }
+                Console.WriteLine($"La somma è pari a {numList.Sum(num => num)}");
             }
         }
     }
