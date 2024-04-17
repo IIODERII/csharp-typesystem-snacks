@@ -33,23 +33,23 @@ namespace csharp_typesystem_snacks
             //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
             //Ogni volta che ne crei uno, stampalo a schermo.
             {
-            //Snack 1
-            Console.WriteLine("Inserire il primo numero");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Inserire il secondo numero");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+                //Snack 1
+                Console.WriteLine("Inserire il primo numero");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Inserire il secondo numero");
+                int num2 = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine($"Il numero più grande tra i due è {Math.Max(num1, num2)}");
             }
             {
-            //Snack 2
-            Console.WriteLine("\n\nInserire la prima parola");
-            string word1 = Console.ReadLine();
-            Console.WriteLine("Inserire la seconda parola");
-                string word2 = Console.ReadLine();
+                //Snack 2
+                Console.WriteLine("\n\nInserire la prima parola");
+                string word1 = Console.ReadLine();
+                Console.WriteLine("Inserire la seconda parola");
+                    string word2 = Console.ReadLine();
             
-            Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
-            Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
+                Console.WriteLine(word1.Length > word2.Length ? word2 : word1);
+                Console.WriteLine(word1.Length > word2.Length ? word1 : word2);
             }
             {
                 //Snack 3
@@ -60,6 +60,20 @@ namespace csharp_typesystem_snacks
                     somma += Convert.ToInt32(Console.ReadLine());
                 }
                 Console.WriteLine($"La somma dei numeri inseriti è: {somma}");
+            }
+            {
+                //Snack 4
+                int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+                int somma = 0;
+
+                foreach (int number in numbers)
+                {
+                    somma += number;
+                }
+
+                Console.WriteLine($"\n\nLa somma dei numeri da 2 a 10 è: {somma}");
+                Console.WriteLine($"La mdeia dei numeri da 2 a 10 è: {somma / numbers.Length}");
             }
         }
     }
