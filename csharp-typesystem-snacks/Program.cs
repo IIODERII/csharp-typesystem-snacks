@@ -75,6 +75,20 @@ namespace csharp_typesystem_snacks
                 Console.WriteLine($"\n\nLa somma dei numeri da 2 a 10 è: {somma}");
                 Console.WriteLine($"La mdeia dei numeri da 2 a 10 è: {somma / numbers.Length}");
             }
+            {
+                //Snack 5
+                Console.WriteLine("Inserire un numero: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+
+                if(num % 2 == 0)
+                {
+                    Console.WriteLine($"Il numero è pari, quindi ecco il tuo numero: {num}");
+                }
+                else
+                {
+                    Console.WriteLine($"Il numero è dispari, quindi ecco il numero successivo: {num++}");
+                }
+            }
         }
     }
 }
