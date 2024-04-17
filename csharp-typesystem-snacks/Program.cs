@@ -105,22 +105,36 @@ namespace csharp_typesystem_snacks
             //        Console.WriteLine($"Mi dispiace {name} ma non la vedo sulla mia lista");
             //    }
             //}
+            //{
+            //    //Snack 7
+            //    int[] numList = {};
+            //    for(int i = 0; i < 6; i++) {
+            //        Console.WriteLine("Inserire un numero:");
+            //        int num = Convert.ToInt32(Console.ReadLine());
+            //        if( num % 2 == 0)
+            //        {
+            //            Array.Resize(ref numList, numList.Length+1);
+            //            numList[numList.Length - 1] = num;
+            //        };
+            //    }
+            //    foreach (var num in numList)
+            //    {
+            //        Console.WriteLine(num);
+            //    }
+            //}
             {
-                //Snack 7
-                int[] numList = {};
-                for(int i = 0; i < 6; i++) {
-                    Console.WriteLine("Inserire un numero:");
-                    int num = Convert.ToInt32(Console.ReadLine());
-                    if( num % 2 == 0)
-                    {
-                        Array.Resize(ref numList, numList.Length+1);
-                        numList[numList.Length - 1] = num;
-                    };
-                }
-                foreach (var num in numList)
+                //Snack 8
+                int[] numList = { 2, 45, 7, 32, 3, 4, 1, 6, 4, 2, 85 };
+                int somma = 0;
+                for(int i = 0;i < numList.Length;i++)
                 {
-                    Console.WriteLine(num);
+                    if(i% 2 != 0)
+                    {
+                        somma += numList[i];
+                    }
                 }
+
+                Console.WriteLine($"La somma dei inumeri in posizione dispari è: {somma}");
             }
         }
     }
